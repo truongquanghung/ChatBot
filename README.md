@@ -1,13 +1,24 @@
 # ChatBot
 
-The Application is Dockerized so run the following command:
+More Intent-datas help Bot smarter
 
-Build:
+Add Intent-datas to Intents.json file
 
-``` docker-compose up -d --build ```
+Build Model:
 
-Run: 
-``` docker-compose up ```
-## Screenshot
+``` 
+python build_model.py 
+```
 
-![](resources/bot.png)
+Install Requirements:
+
+```powershell
+pip install -r requirements
+```
+
+Run ChatBot:
+
+```powershell 
+pyhton app.py 
+```
+

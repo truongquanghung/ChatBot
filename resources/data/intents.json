@@ -59,6 +59,7 @@
             "tag": "name",
             "patterns": [
                 "what is your name",
+                "who are you",
                 "what should I call you",
                 "whats your name?",
                 "name please ?",
@@ -96,7 +97,8 @@
                 "hours of operation"
             ],
             "responses": [
-                "We are open 24/7!"
+                "We are open 24/7!",
+                "Whenever you need!"
             ],
             "context_set": ""
         }
