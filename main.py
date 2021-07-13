@@ -16,10 +16,10 @@ lemmatizer = WordNetLemmatizer()
 THRESHOLD = 0.25
 
 
-model = load_model('/code/resources/models/chatbot_model.h5')
-intents = json.loads(open('/code/resources/data/intents.json').read())
-words = pickle.load(open('/code/resources/pickles/words.pkl', 'rb'))
-classes = pickle.load(open('/code/resources/pickles/classes.pkl', 'rb'))
+model = load_model('resources/models/chatbot_model.h5')
+intents = json.loads(open('resources/data/intents.json').read())
+words = pickle.load(open('resources/pickles/words.pkl', 'rb'))
+classes = pickle.load(open('resources/pickles/classes.pkl', 'rb'))
 
 print('RESOURCES LOADED SUCESSFULLY!')
 

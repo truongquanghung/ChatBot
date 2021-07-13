@@ -21,6 +21,7 @@
             "tag": "goodbye",
             "patterns": [
                 "cya",
+                "bye",
                 "see you mate!",
                 "See you later",
                 "Goodbye",
@@ -31,7 +32,7 @@
                 "Sad to see you go :(",
                 "Talk to you later",
                 "Goodbye!",
-                "see you mate!"
+                "See you mate!"
             ],
             "context_set": ""
         },
@@ -65,10 +66,10 @@
             ],
             "responses": [
                 "I am your assistant",
-                "You can call me bot",
+                "You can call me Hippo",
                 "I'm your friend",
-                "you can call me whatever you want",
-                "i am a machine"
+                "You can call me whatever you want",
+                "I am a machine"
             ],
             "context_set": ""
         },
@@ -81,9 +82,9 @@
                 "tell me something about this website"
             ],
             "responses": [
-                "we provide easy connection between people",
-                "pretty much what you are looking for",
-                "we have a lot of features wanna try."
+                "We provide easy connection between people",
+                "Pretty much what you are looking for",
+                "We have a lot of features wanna try."
             ],
             "context_set": ""
         },
@@ -95,7 +96,7 @@
                 "hours of operation"
             ],
             "responses": [
-                "We are open 7am-4pm Monday-Friday!"
+                "We are open 24/7!"
             ],
             "context_set": ""
         }
