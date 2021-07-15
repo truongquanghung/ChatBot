@@ -66,11 +66,11 @@
                 "name"
             ],
             "responses": [
-                "I am your assistant",
+                "May be you can call me Hippo",
                 "You can call me Hippo",
-                "I'm your friend",
+                "Hippo is my name",
                 "You can call me whatever you want",
-                "I am a machine"
+                "My name is Hippo"
             ],
             "context_set": ""
         },
@@ -98,7 +98,8 @@
             ],
             "responses": [
                 "We are open 24/7!",
-                "Whenever you need!"
+                "Whenever you need!",
+                "All days and all nights :v"
             ],
             "context_set": ""
         }
