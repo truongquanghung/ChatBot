@@ -1,24 +1,16 @@
 # ChatBot
 
-More Intent-datas help Bot smarter
-
-Add Intent-datas to Intents.json file
-
-Build Model:
-
-``` 
-python build_model.py 
-```
-
-Install Requirements:
+Step 1: Install Requirements:
 
 ```powershell
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
-Run ChatBot:
+Step 2: Run ChatBot Server:
 
 ```powershell 
 pyhton app.py 
 ```
+
+Step 3: Using IP address in terminal for test ChatBot
 
