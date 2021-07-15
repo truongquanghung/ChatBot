@@ -5,9 +5,9 @@ if (!myStorage.getItem('chatID')) {
     myStorage.setItem('chatID', createUUID());
 }
 
-setTimeout(function () {
-    element.addClass('enter');
-}, 1000);
+// setTimeout(function () {
+//     element.addClass('enter');
+// }, 1000);
 
 element.click(openElement);
 
