@@ -9,14 +9,17 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import load_model
 import numpy as np
 import pickle
-import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+import nltk
+nltk.data.path.append(os.path.join(BASE_DIR,'data/punkt'))
+nltk.data.path.append(os.path.join(BASE_DIR,'data/wordnet'))
+nltk.download('punkt', download_dir=os.path.join(BASE_DIR,'data/punkt'))
+nltk.download('wordnet', download_dir=os.path.join(BASE_DIR,'data/wordnet'))
 
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
