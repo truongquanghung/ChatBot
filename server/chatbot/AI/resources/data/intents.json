@@ -14,8 +14,7 @@
                 "Hello!",
                 "Good to see you again!",
                 "Hi there, how can I help?"
-            ],
-            "context_set": ""
+            ]
         },
         {
             "tag": "goodbye",
@@ -33,8 +32,7 @@
                 "Talk to you later",
                 "Goodbye!",
                 "See you mate!"
-            ],
-            "context_set": ""
+            ]
         },
         {
             "tag": "age",
@@ -52,8 +50,7 @@
                 "I have no age",
                 "I dont age",
                 "I have no age"
-            ],
-            "context_set": ""
+            ]
         },
         {
             "tag": "name",
@@ -71,8 +68,7 @@
                 "Hippo is my name",
                 "You can call me whatever you want",
                 "My name is Hippo"
-            ],
-            "context_set": ""
+            ]
         },
         {
             "tag": "service",
@@ -80,14 +76,14 @@
                 "what is the service you provide",
                 "whats on this website",
                 "what do you reccommend?",
-                "tell me something about this website"
+                "tell me something about this website",
+                "service"
             ],
             "responses": [
                 "We provide easy connection between people",
                 "Pretty much what you are looking for",
                 "We have a lot of features wanna try."
-            ],
-            "context_set": ""
+            ]
         },
         {
             "tag": "hours",
@@ -100,8 +96,30 @@
                 "We are open 24/7!",
                 "Whenever you need!",
                 "All days and all nights :v"
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "What time is this open",
+                "time"
             ],
-            "context_set": ""
+            "responses": [
+                "We are open 24/7!",
+                "Whenever you need!",
+                "All days and all nights :v"
+            ]
+        },
+        {
+            "tag": "contact",
+            "patterns": [
+                "which one i can contact",
+                "contact"
+            ],
+            "responses": [
+                "Hippo Tech",
+                "Our developer team in HippoTech"
+            ]
         }
     ]
 }

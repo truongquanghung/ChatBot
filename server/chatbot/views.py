@@ -16,6 +16,12 @@ class Get(View):
         print(userText)
         return HttpResponse(main.chatbot_response(str(userText)))
 
+class Build(View):
+    def get(self, request):
+        main.build_model()
+        importlib.reload(main)
+        return redirect('/')
+
 class Reload(View):
     def get(self, request):
         importlib.reload(main)
