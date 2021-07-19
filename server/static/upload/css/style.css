@@ -1,0 +1,65 @@
+:root {
+  --space: 2rem;
+  --space-xs: calc(var(--space) / 3);
+  --space-sm: calc(var(--space) / 2);
+  --space-md: calc(var(--space) * 2);
+}
+.card-sidebar {
+  --offset: var(--space);
+  flex-grow: 1;
+  flex-basis: 300px;
+  min-height: 300px;
+  align-self: start;
+  position: sticky;
+  top: var(--offset);
+}
+.card {
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+}
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.embed-content {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 14px;
+}
+.embed-data {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 14px;
+}
+.content-item {
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.dropdown_content {
+  padding: 12px;
+}
+
+.options_container {
+  margin-top: 12px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  height: 250px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.status {
+  padding: 0.75em;
+  border: 1px solid gray;
+  margin: 0;
+}

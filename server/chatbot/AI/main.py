@@ -37,6 +37,19 @@ print('RESOURCES LOADED SUCESSFULLY!')
 
 # applying lemmmatization
 
+def add_data(data):
+    new_data = intents
+    for intent in data['intents']:
+        temp = {}
+        temp['tag'] = intent['tag']
+        temp['patterns'] = intent['patterns']
+        temp['responses'] = intent['responses']
+        new_data['intents'].append(temp)
+    jsonfile = open(os.path.join(BASE_DIR,'AI/resources/data/intents.json'),'w')
+    jsonfile.write(json.dumps(new_data, indent=4))
+    jsonfile.close 
+
+
 def build_model():
     words = []
     classes = []

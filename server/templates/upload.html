@@ -1,0 +1,30 @@
+{% load static %}
+<htm>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'upload/css/style.css' %}" />
+    </head>
+
+    <body>
+        <div class="mt-4 content-item">
+            <h2 class="card-subtitle text-muted">Data For Train Format</h2>
+            <embed src="{% static 'data.json' %}" class="embed-data" />
+            <a href="{% static 'data.json' %}" download="demo_train_data.txt"><button class="btn btn-info mt-2">
+                    Download Demo Data For Train
+                </button></a>
+        </div>
+        <div class="mt-4 content-item">
+            <h2 class="card-subtitle text-muted mb-3">Submit data here</h2>
+            <form method="POST" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="data" style="width: 100px">Data</label>
+                    <input type="file" class="form-control" id="data" name="file" accept=".json"
+                        aria-describedby="inputGroupFileAddon01" required />
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn btn-primary">Train</button>
+                </div>
+            </form>
+    </body>
+</htm>

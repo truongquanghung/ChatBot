@@ -8,6 +8,10 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 """
 
 import os
+import sys
+
+# Use when deploy
+# sys.path.append(r"/home/hippotech/.local/lib/python3.8/site-packages")
 
 from django.core.wsgi import get_wsgi_application
 

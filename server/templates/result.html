@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                font-size: large;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        {% if error %}
+        <h2>
+            {{ error }}
+        </h2>
+        {% endif %}
+        <h2>
+            {{ result }}
+        </h2>
+        <a href="/upload"><button>Back to upload</button></a>
+        <a href="/"><button>Test Chatbot</button></a>
+    </body>
+</html>

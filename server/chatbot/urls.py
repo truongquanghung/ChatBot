@@ -6,4 +6,5 @@ urlpatterns = [
     path('get', views.Get.as_view(), name='get'),
     path('build', views.Build.as_view(), name='build'),
     path('reload', views.Reload.as_view(), name='reload'),
+    path('upload', views.Upload.as_view(), name='upload'),
 ]
