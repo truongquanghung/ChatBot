@@ -34,20 +34,43 @@ class Upload(View):
             return redirect('admin/login?next=/upload')
         return render(request,'upload.html')
     def post(self, request):
-        try:
-            f = request.FILES["file"]
-            data = json.load(f)
-            main.add_data(data)
-            main.build_model()
-            importlib.reload(main)
-            context = {}
-            context['result'] = 'Train model complete!'
-            return render(request,'result.html',context)
-        except Exception as e:
-            print(e)
-            context = {}
-            context['error'] = str(e)
-            context['result'] = 'Data format invalid, please check and try again!'
-            return render(request,'result.html',context)
-        
+        if request.POST.get('tag') is None:
+            try:
+                f = request.FILES["file"]
+                data = json.load(f)
+                main.add_data(data)
+                main.build_model()
+                importlib.reload(main)
+                context = {}
+                context['result'] = 'Train model complete!'
+                return render(request,'result.html',context)
+            except Exception as e:
+                print(e)
+                context = {}
+                context['error'] = str(e)
+                context['result'] = 'Data format invalid, please check and try again!'
+                return render(request,'result.html',context)
+        else:
+            data = {}
+            data['intents'] = []
+            intent = {}
+            intent['tag'] = request.POST.get('tag')
+            intent['patterns'] = []
+            intent['patterns'].append(request.POST.get('pattern'))
+            intent['responses'] = []
+            intent['responses'].append(request.POST.get('response'))
+            data['intents'].append(intent)
+            try:
+                main.add_data(data)
+                main.build_model()
+                importlib.reload(main)
+                context = {}
+                context['result'] = 'Train model complete!'
+                return render(request,'result.html',context)
+            except Exception as e:
+                print(e)
+                context = {}
+                context['error'] = str(e)
+                context['result'] = 'Data format invalid, please check and try again!'
+                return render(request,'result.html',context)
 

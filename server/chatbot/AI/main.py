@@ -44,7 +44,14 @@ def add_data(data):
         temp['tag'] = intent['tag']
         temp['patterns'] = intent['patterns']
         temp['responses'] = intent['responses']
-        new_data['intents'].append(temp)
+        kt = True
+        for tg in new_data['intents']:
+            if tg['tag'] == temp['tag']:
+                kt = False
+                tg['patterns'].extend(intent['patterns'])
+                tg['responses'].extend(intent['responses'])
+        if kt:
+            new_data['intents'].append(temp)
     jsonfile = open(os.path.join(BASE_DIR,'AI/resources/data/intents.json'),'w')
     jsonfile.write(json.dumps(new_data, indent=4))
     jsonfile.close 
