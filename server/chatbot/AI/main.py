@@ -35,7 +35,6 @@ classes = pickle.load(open(os.path.join(BASE_DIR,'AI/resources/pickles/classes.p
 
 print('RESOURCES LOADED SUCESSFULLY!')
 
-# applying lemmmatization
 
 def add_data(data):
     new_data = intents
@@ -78,10 +77,6 @@ def build_model():
     words = sorted(list(set(words)))
     classes = sorted(list(set(classes)))
 
-    # print(len(documents), "documents")
-    # print(len(classes), 'classes', classes)
-    # print(len(words), "unique lemmatized words", words)
-
     pickle.dump(words, open(os.path.join(BASE_DIR,'AI/resources/pickles/words.pkl'), 'wb'))
     pickle.dump(classes, open(os.path.join(BASE_DIR,'AI/resources/pickles/classes.pkl'), 'wb'))
     pickle.dump(documents, open(os.path.join(BASE_DIR,'AI/resources/pickles/documents.pkl'), 'wb'))
@@ -123,15 +118,15 @@ def build_model():
 
     print("model created")
 
+
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(
         word.lower()) for word in sentence_words]
     return sentence_words
 
+
 # creating bag_of_words
-
-
 def bag_of_words(sentence, words, show_details=True):
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)

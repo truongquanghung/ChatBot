@@ -31,7 +31,7 @@ class Reload(View):
 class Upload(View):
     def get(self, request):
         if not request.user.is_superuser:
-            return redirect('admin/login?next=/upload')
+            return redirect('admin/login/?next=/upload')
         return render(request,'upload.html')
     def post(self, request):
         if request.POST.get('tag') is None:
