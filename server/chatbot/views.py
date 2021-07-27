@@ -17,6 +17,21 @@ class Get(View):
         print(userText)
         return HttpResponse(main.chatbot_response(str(userText)))
 
+class Tag(View):
+    def get(self, request):
+        data = {
+            'tag': main.list_tag()
+        }
+        return render(request, 'tag.html', data)
+
+class Intent(View):
+    def get(self, request, tag):
+        data = {
+            'tag': tag,
+            'intent': main.list_intent(tag)
+        }
+        return render(request, 'intent.html', data)
+
 class Build(View):
     def get(self, request):
         main.build_model()

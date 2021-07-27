@@ -20,4 +20,6 @@ pyhton manage.py runserver
 ## Function
 * /upload: Upload new data for training model 
 
-* /load: Refresh model for chatbot   
+* /reload: Reload model for chatbot   
+
+* /tag: View Intent in database   

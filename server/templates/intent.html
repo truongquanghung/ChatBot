@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>{{tag}}</title>
+        <style>
+            h2{
+                text-align: center;
+            }
+            body{
+                font-size: larger;
+            }
+            .intent{
+                margin-left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            List of Patterns and Responses in Intent tag {{tag}}
+        </h2>
+        <div class="intent">
+            <h3>Patterns</h3>
+            {% for pattern in intent.patterns %}
+            <li>
+                {{pattern}}
+            </li>
+            {% endfor %}
+            <br>
+            <h3>Responses</h3>
+            {% for response in intent.responses %}
+            <li>
+                {{response}}
+            </li>
+            {% endfor %}
+        </div>
+    </body>
+</html>

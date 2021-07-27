@@ -172,6 +172,18 @@ def chatbot_response(message):
     return res
 
 
+def list_tag():
+    tag = []
+    for intent in intents['intents']:
+        tag.append(intent['tag'])
+    return tag
+
+
+def list_intent(tag):
+    for intent in intents['intents']:
+        if tag==intent['tag']:
+            return intent
+
 def main():
     while True:
         inp = input('You:\t')

@@ -7,4 +7,6 @@ urlpatterns = [
     path('build', views.Build.as_view(), name='build'),
     path('reload', views.Reload.as_view(), name='reload'),
     path('upload', views.Upload.as_view(), name='upload'),
+    path('tag', views.Tag.as_view(), name='tag'),
+    path('tag/<str:tag>', views.Intent.as_view(), name='intent'),
 ]

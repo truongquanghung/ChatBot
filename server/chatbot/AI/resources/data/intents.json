@@ -90,17 +90,7 @@
             "patterns": [
                 "when are you guys open",
                 "what are your hours",
-                "hours of operation"
-            ],
-            "responses": [
-                "We are open 24/7!",
-                "Whenever you need!",
-                "All days and all nights :v"
-            ]
-        },
-        {
-            "tag": "hours",
-            "patterns": [
+                "hours of operation",
                 "What time is this open",
                 "time"
             ],

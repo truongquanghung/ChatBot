@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Tag</title>
+        <style>
+            body{
+                font-size: larger;
+            }
+            h2{
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+            }
+            li{
+                margin-left: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            List of Intent_tags in database
+        </h2>
+        {% for x in tag %}
+            <li>
+                <a href="/tag/{{x}}">
+                    {{x}}
+                </a>
+            </li>
+        {% endfor %}
+    </body>
+</html>
