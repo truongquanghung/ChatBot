@@ -5,6 +5,7 @@ from .AI import main
 import importlib
 from django.contrib.auth.models import User
 import json
+from googletrans import Translator
 # Create your views here.
 
 class Home(View):
@@ -12,10 +13,13 @@ class Home(View):
         return render(request,'home.html')
 
 class Get(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         userText = request.GET.get('msg')
-        print(userText)
-        return HttpResponse(main.chatbot_response(str(userText)))
+        translator = Translator(service_urls=['translate.googleapis.com'])
+        res = translator.translate(userText, dest='en')
+        print(res.text)
+        response = translator.translate(main.chatbot_response(res.text), dest=res.src)
+        return HttpResponse(response.text)
 
 class Tag(View):
     def get(self, request):

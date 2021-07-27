@@ -31,7 +31,7 @@
                 "Sad to see you go :(",
                 "Talk to you later",
                 "Goodbye!",
-                "See you mate!"
+                "See you soon!"
             ]
         },
         {
@@ -45,10 +45,8 @@
             ],
             "responses": [
                 "I am a bot so I don't age",
-                "I am immortal you are not.",
-                "I am a bot",
                 "I have no age",
-                "I dont age",
+                "I don't age",
                 "I have no age"
             ]
         },
@@ -97,14 +95,15 @@
             "responses": [
                 "We are open 24/7!",
                 "Whenever you need!",
-                "All days and all nights :v"
+                "All days and all nights"
             ]
         },
         {
             "tag": "contact",
             "patterns": [
-                "which one i can contact",
-                "contact"
+                "Who can help me",
+                "Which one i can contact",
+                "Contact"
             ],
             "responses": [
                 "Hippo Tech",

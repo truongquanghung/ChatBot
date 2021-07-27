@@ -67,13 +67,17 @@ function sendNewMessage() {
         newMessage,
         '</li>'].
         join(''));
-
+    
     $.get("/get", { msg: newMessage }).done(function (data) {
         messagesContainer.append([
             '<li class="self">',
             data,
             '</li>'].
             join(''));
+        messagesContainer.finish().animate({
+            scrollTop: messagesContainer.prop("scrollHeight")
+        },
+            250);
     });
 
     // clean out old message
